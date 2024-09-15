@@ -21,6 +21,8 @@ Board::Board(int m, int n) {
     this->board = board;
     this->rows = m;
     this->cols = n;
+    this->t = 0;
+    this->population = 0;
 }
 
 void Board::fill_random(float p) {
@@ -32,6 +34,7 @@ void Board::fill_random(float p) {
 
             if (randomFloat <= p) {
                 board[i][j] = 1;
+                population++;
             }
         }
     }
@@ -48,5 +51,6 @@ void Board::print_state() {
         }
         std::cout << "\n";
     }
+    std::cout << population << " " << t << "\n";
 }
 

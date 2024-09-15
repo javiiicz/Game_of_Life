@@ -11,6 +11,7 @@ class Board {
     int **board; // Stores location of board object
     int rows; // Number of rows in board
     int cols; // Number of columns in board
+
 public:
     /**
      * Creates an empty 2D array of specified dimensions and sets it internally
@@ -29,6 +30,9 @@ public:
      * Prints to console the current state of the board
      */
     void print_state();
+
+    int population; // Number of cells alive
+    int t; // Time in simulation
 };
 
 
