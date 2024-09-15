@@ -9,7 +9,7 @@
 
 class debug {
 public:
-    static void print_state(int rows, int cols, int** board);
+    static void test();
 };
 
 
