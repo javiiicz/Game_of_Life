@@ -1,23 +1,11 @@
 #include <SFML/Graphics.hpp>
-#include "logic.h"
+#include "board.h"
 #include "debug.h"
-
-
-
 
 int main()
 {
-    debug d;
+    debug::test();
 
-    int rows = 40;
-    int cols = 20;
-
-    int** board = new int*[rows];
-    for (int i =0; i < rows; i++) {
-        board[i] = new int[cols];
-    }
-
-    d.print_state(rows, cols, board);
     // auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
     // window.setFramerateLimit(144);
     //
@@ -34,5 +22,6 @@ int main()
     //     window.clear();
     //     window.display();
     // }
+
 
 }
