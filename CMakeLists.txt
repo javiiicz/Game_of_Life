@@ -14,8 +14,8 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_executable(main src/main.cpp
-        src/logic.cpp
-        src/logic.h
+        src/board.cpp
+        src/board.h
         src/debug.cpp
         src/debug.h)
 target_link_libraries(main PRIVATE sfml-graphics)
