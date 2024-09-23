@@ -6,14 +6,14 @@
 
 #include "SFML/Graphics.hpp"
 
-Grid::Grid(int rows, int cols, int cell_size, int margin){
+Grid::Grid(int rows, int cols, int cell_size, int margin, float p){
     this->b = std::make_unique<Board>(rows, cols);
     this->cols = cols;
     this->rows = rows;
     this->cell_size = cell_size;
     this->margin = margin;
 
-    this->b->fill_random(0.5f);
+    this->b->fill_random(p);
 }
 
 void Grid::draw(sf::RenderWindow& window) {
@@ -34,4 +34,8 @@ void Grid::draw(sf::RenderWindow& window) {
             window.draw(cell);
         }
     }
+}
+
+void Grid::advance() {
+    b->next_state();
 }
