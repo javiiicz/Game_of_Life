@@ -17,7 +17,9 @@ add_executable(main src/main.cpp
         src/board.cpp
         src/board.h
         src/debug.cpp
-        src/debug.h)
+        src/debug.h
+        src/grid.cpp
+        src/grid.h)
 target_link_libraries(main PRIVATE sfml-graphics)
 target_compile_features(main PRIVATE cxx_std_17)
 
