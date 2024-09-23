@@ -15,14 +15,16 @@ class Grid {
     int rows;
     int cols;
     int cell_size;
+    int margin;
 public:
     /**
      *  Constructs a grid object with a Board of the same size
      * @param rows # of rows
      * @param cols # of columns
      * @param cell_size size of rendered cells
+     * @param margin size of margins around the grid
      */
-    Grid(int rows, int cols, int cell_size);
+    Grid(int rows, int cols, int cell_size, int margin);
 
     /**
      * Draws the current state of the board to the window

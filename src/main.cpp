@@ -5,11 +5,12 @@ int main() {
     // Parameters
     const int ROWS = 100;
     const int COLS = 200;
-    const int CELL_SIZE = 10;
+    const int CELL_SIZE = 5;
+    const int MARGIN = 50;
 
-    Grid g(ROWS, COLS, CELL_SIZE);
+    Grid g(ROWS, COLS, CELL_SIZE, MARGIN);
 
-    sf::RenderWindow window(sf::VideoMode(COLS * CELL_SIZE, ROWS * CELL_SIZE), "Game of Life");
+    sf::RenderWindow window(sf::VideoMode(COLS * CELL_SIZE + 2*  MARGIN, ROWS * CELL_SIZE + 2 * MARGIN), "Game of Life");
 
     window.setFramerateLimit(144);
 

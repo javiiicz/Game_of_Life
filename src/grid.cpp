@@ -6,11 +6,12 @@
 
 #include "SFML/Graphics.hpp"
 
-Grid::Grid(int rows, int cols, int cell_size){
+Grid::Grid(int rows, int cols, int cell_size, int margin){
     this->b = std::make_unique<Board>(rows, cols);
     this->cols = cols;
     this->rows = rows;
     this->cell_size = cell_size;
+    this->margin = margin;
 
     this->b->fill_random(0.5f);
 }
@@ -19,7 +20,7 @@ void Grid::draw(sf::RenderWindow& window) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             sf::RectangleShape cell(sf::Vector2f(cell_size, cell_size));
-            cell.setPosition(j * cell_size, i * cell_size);
+            cell.setPosition(margin + j * cell_size, margin + i * cell_size);
 
             // Set color
             if (this->b->get(i, j)) {
